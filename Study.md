@@ -9,9 +9,11 @@ O grau é definido pelo maior expoente da equação, x^0 será constante, x^1 é
 A forma reduzida é aquela na qual os valores a direita do sinal de igualdade são substituídos por 0.
 Por exemplo:
 
+```
 x^2 + 3x + 42 = 7x + 7
 x^2 + 3x - 7x + 42 - 7 = 0
 x^2 - 4x + 35 = 0
+```
 
 ## Fórmulas
 
