@@ -1,6 +1,7 @@
 require_relative 'get_degree'
 require_relative 'update_map_x'
 require_relative 'update_map'
+require_relative 'print_reduced'
 
 # Main function for script language
 #
@@ -28,7 +29,7 @@ def main(argc, argv)
   begin
     data = mount_map(str.split(' '))
     degree = get_degree(str)
-    puts("Reduced form: #{data['a']}X² + #{data['b']}X + #{data['c']} = 0")
+    print_reduced(data)
     puts("Degree: #{degree}")
   rescue ArgumentError, TypeError => e
     puts("Convertion to real number error: #{e.message}")
