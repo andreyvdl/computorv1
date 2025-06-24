@@ -57,6 +57,8 @@ def mount_map(arr)
     if (arr[i].start_with?('-', '+') && ('0'..'9').to_a.include?(arr[i][1])) || ('0'..'9').to_a.include?(arr[i][0])
       data, i = update_map(data, arr, i, sign)
     elsif arr[i] == '='
+      raise StandardError, 'Already found a `=`' unless sign > 0.0
+
       sign = -sign
       i += 1
     elsif ['+X^0', '-X^0', 'X^0', '+X^2', '-X^2', 'X^2', '+X^1', '-X^1', 'X^1', '+X', '-X', 'X'].include?(arr[i])
