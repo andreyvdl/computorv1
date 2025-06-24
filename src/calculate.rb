@@ -1,4 +1,5 @@
 require_relative 'isolation'
+require_relative 'bhaskara'
 
 # Print steps taken to reach the results
 #
