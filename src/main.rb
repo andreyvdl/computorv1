@@ -2,6 +2,7 @@ require_relative 'get_degree'
 require_relative 'update_map_x'
 require_relative 'update_map'
 require_relative 'print_reduced'
+require_relative 'calculate'
 
 # Main function for script language
 #
@@ -31,6 +32,7 @@ def main(argc, argv)
     degree = get_degree(str)
     print_reduced(data)
     puts("Degree: #{degree}")
+    print_steps_n_result(data)
   rescue ArgumentError, TypeError => e
     puts("Convertion to real number error: #{e.message}")
   rescue StandardError => e
