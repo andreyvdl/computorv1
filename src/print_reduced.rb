@@ -10,9 +10,9 @@ def print_reduced(data)
   print('Reduced form: ')
 
   terms = []
-  terms << "#{a}X^2" unless a == 0.0
-  terms << "#{b}X" unless b == 0.0
-  terms << c.to_s unless c == 0.0
+  terms << "#{a}X^2" unless a.zero?
+  terms << "#{b}X" unless b.zero?
+  terms << c.to_s unless c.zero?
 
   if terms.empty?
     puts('0 = 0')
