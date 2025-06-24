@@ -9,7 +9,10 @@ def update_map(data, arr, idx, sign)
   val = Float(arr[idx]) * sign
 
   idx += 1
-  if arr[idx] == '*'
+  if idx >= arr.length
+    data['c'] += val
+    return [data, idx]
+  elsif arr[idx] == '*'
     idx += 1
   elsif ['+', '-', '='].include?(arr[idx])
     data['c'] += val

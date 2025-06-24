@@ -15,7 +15,7 @@ def main(argc, argv)
 
   argv = argv.strip
 
-  valid_chars = ['+', '-', '*', '=', 'X', '^', ' '] + ('0'..'9').to_a
+  valid_chars = ['+', '-', '*', '=', 'X', '^', ' ', '.'] + ('0'..'9').to_a
   invalid_chars = argv.each_char.find { |c| !valid_chars.include?(c) }
 
   if invalid_chars
